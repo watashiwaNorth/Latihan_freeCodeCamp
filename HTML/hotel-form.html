@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Feedback Form</title>
+</head>
+<body>
+
+    <header>
+        <h1>Hotel Feedback Form</h1>
+        <p>Thank you for staying with us. Please provide feedback on your recent stay.</p>
+    </header>
+
+    <main>
+        <form method="POST" action="https://hotel-feedback.freecodecamp.org">
+            
+            <fieldset>
+                <legend>Personal Information</legend>
+                
+                <p>
+                    <label for="full-name">Name (required):</label><br />
+                    <input type="text" id="full-name" name="name" placeholder="e.g., John Doe" required size="20" />
+                </p>
+                
+                <p>
+                    <label for="email">Email Address (required):</label><br />
+                    <input type="email" id="email" name="email" placeholder="example@email.com" required size="20" />
+                </p>
+                
+                <p>
+                    <label for="age">Age (optional):</label><br />
+                    <input type="number" id="age" name="age" min="3" max="100" />
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Was this your first time at our hotel?</legend>
+                
+                <label>
+                    <input type="radio" id="yes-option" name="hotel-stay" value="yes" /> Yes
+                </label>
+                <br />
+                <label>
+                    <input type="radio" id="no-option" name="hotel-stay" value="no" /> No
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Why did you choose to stay at our hotel? (Check all that apply)</legend>
+
+                <p>
+                    <input type="checkbox" id="ads" name="choice" value="ads" />
+                    <label for="ads">Social Media Ads</label>
+                </p>
+
+                <p>
+                    <input type="checkbox" id="recommendation" name="choice" value="recommendation" />
+                    <label for="recommendation">Personal Recommendation</label>
+                </p>
+                
+                <p>
+                    <input type="checkbox" id="location" name="choice" value="location" />
+                    <label for="location">Location</label>
+                </p>
+
+                <p>
+                    <input type="checkbox" id="reputation" name="choice" value="reputation" checked />
+                    <label for="reputation">Reputation</label>
+                </p>
+                
+                <p>
+                    <input type="checkbox" id="price" name="choice" value="price" />
+                    <label for="price">Price</label>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Service & Food Ratings</legend>
+
+                <p>
+                    <label for="service">How was the service?</label><br />
+                    <select name="service" id="service">
+                        <option value="poor">Poor</option>
+                        <option value="satisfactory">Satisfactory</option>
+                        <option value="good">Good</option>
+                        <option value="very-good">Very Good</option>
+                        <option value="excellent" selected>Excellent</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="food">How was the food?</label><br />
+                    <select name="food" id="food">
+                        <option value="poor">Poor</option>
+                        <option value="satisfactory">Satisfactory</option>
+                        <option value="good">Good</option>
+                        <option value="very-good">Very Good</option>
+                        <option value="excellent" selected>Excellent</option>
+                    </select>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Feedback</legend>
+                <p>
+                    <label for="comments">Other Comments?</label><br />
+                    <textarea id="comments" name="comments" cols="40" rows="6" placeholder="Type your feedback here..."></textarea>
+                </p>
+            </fieldset>
+
+            <p>
+                <button type="submit">Submit Feedback</button>
+            </p>
+                    
+        </form>
+    </main>
+
+    <footer>
+        <p><small>&copy; 2026 Hotel Feedback System. All rights reserved.</small></p>
+    </footer>
+
+</body>
+</html>
