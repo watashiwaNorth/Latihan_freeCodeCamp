@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+</head>
+<body>
+
+    <h1 id="title">Formulir Pendaftaran Classmeet SMK 8</h1>
+    <p id="description">Tournament Classmeet akan diadakan seminggu lagi, jadi dimohon untuk mengisi dengan jujur dan keinginan siswa-siswi</p>
+
+    <form id="survey-form">
+        
+        <fieldset>
+            <legend>Data Siswa</legend>
+            <p>
+                <label for="name" id="name-label">Nama (Required):</label><br />
+                <input type="text" id="name" name="nama" placeholder="Siswa" required />
+            </p>
+            <p>
+                <label for="email" id="email-label">Email (Required):</label><br />
+                <input type="email" id="email" name="email" placeholder="example" required />
+            </p>
+            <p>
+                <label for="number" id="number-label">Umur (Required):</label><br />
+                <input type="number" id="number" name="umur" placeholder="18" min="15" max="19" required />
+            </p>
+            <p>
+                <label for="dropdown">Dari Kelas:</label><br />
+                <select id="dropdown" name="kelas">
+                    <option value="x-ak" selected>X AK</option>
+                    <option value="x-MP">X MP</option>
+                    <option value="x-pemasaran">X Pemasaran</option>
+                    <option value="x-ulw">X ULW</option>
+                    <option value="x-rpl">X RPL</option>
+                    <option value="xi-ak">XI AK</option>
+                    <option value="xi-MP">XI MP</option>
+                    <option value="xi-pemasaran">XI Pemasaran</option>
+                    <option value="xi-ulw">XI ULW</option>
+                    <option value="xi-rpl">XI RPL</option>
+                    <option value="xii-ak">XII AK</option>
+                    <option value="xii-MP">XII MP</option>
+                    <option value="xii-pemasaran">XII Pemasaran</option>
+                    <option value="xii-ulw">XII ULW</option>
+                    <option value="xii-rpl">XII RPL</option>
+                </select>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Pilihlah salah satu permainan lomba:</legend>
+            <p>
+                <input type="radio" id="sepak-bola" name="permainan" value="sepak-bola" />
+                <label for="sepak-bola">Sepak Bola</label>
+            </p>
+            <p>
+                <input type="radio" id="volly" name="permainan" value="volly" />
+                <label for="volly">Volly</label>
+            </p>
+            <p>
+                <input type="radio" id="bola-beracun" name="permainan" value="bola-beracun" />
+                <label for="bola-beracun">Bola Beracun</label>
+            </p>
+            <p>
+                <input type="radio" id="mobile-legend" name="permainan" value="mobile-legend" />
+                <label for="mobile-legend">Mobile Legend</label>
+            </p>
+            <p>
+                <input type="radio" id="desain-grafis" name="permainan" value="desain-grafis" checked />
+                <label for="desain-grafis">Desain Grafis</label>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Atribut / Fasilitas Tim yang Dibutuhkan (Pilih semua yang sesuai):</legend>
+            <p>
+                <input type="checkbox" id="p3k" name="p3k" value="p3k" checked />
+                <label for="p3k">P3K</label>
+            </p>
+            <p>
+                <input type="checkbox" id="minum" name="minum" value="minum" />
+                <label for="minum">Botol Minum</label>
+            </p>
+            <p>
+                <input type="checkbox" id="makan" name="makan" value="makan" />
+                <label for="makan">Makanan</label>
+            </p>
+            <p>
+                <input type="checkbox" id="topi" name="topi" value="topi" />
+                <label for="topi">Topi</label>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Umpan Balik</legend>
+            <p>
+                <label for="comments">Pesan & Kesan untuk kedepannya:</label><br />
+                <textarea id="comments" name="comments" rows="4" cols="40" placeholder="Tulis pesan Anda di sini..." required></textarea>
+            </p>
+        </fieldset>
+
+        <p>
+            <button type="submit" id="submit">Submit Formulir</button>
+        </p>
+
+    </form>
+
+</body>
+</html>
