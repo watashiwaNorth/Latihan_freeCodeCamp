@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multimedia Player</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #0f172a;
+      color: #f8fafc;
+      margin: 0;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    main {
+      max-width: 640px;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 2rem;
+      letter-spacing: -0.025em;
+      background: linear-gradient(to right, #38bdf8, #818cf8);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    section {
+      background-color: #1e293b;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+
+    audio, video {
+      width: 100%;
+      border-radius: 8px;
+      display: block;
+      background-color: #000000;
+    }
+
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    p {
+      color: #94a3b8;
+      line-height: 1.6;
+      margin: 0;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+
+  <main>
+    <h1>Multimedia North</h1>
+
+    <section>
+      <h2>Audio Playing: Sailing Away</h2>
+      <audio controls aria-label="Audio track of Sailing Away">
+        <source src="https://cdn.freecodecamp.org/curriculum/js-music-player/sailing-away.mp3" type="audio/mpeg">
+      </audio>
+    </section>
+
+    <section>
+      <h2>Feature Video: Java Script</h2>
+      <video controls width="600" aria-label="Video Track of Java Script">
+        <source src="https://cdn.freecodecamp.org/curriculum/labs/what-is-the-map-method-and-how-does-it-work.mp4" type="video/mp4">
+        <track src="https://cdn.freecodecamp.org/curriculum/labs/what-is-the-map-method-and-how-does-it-work.vtt" kind="subtitles" srclang="en" label="English">
+      </video>
+    </section>
+
+    <section>
+      <h2>Transcript</h2>
+      <p>In this video, we will learn about the JavaScript map method and explore how it works to transform arrays easily</p>
+    </section>
+  </main>
+
+</body>
+</html>
