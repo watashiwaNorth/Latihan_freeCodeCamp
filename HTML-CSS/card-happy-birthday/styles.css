@@ -1,0 +1,120 @@
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f4ece1; 
+  color: #333333;
+  margin: 0;
+}
+
+.card {
+  background-color: #ffffff;
+  max-width: 400px;
+  padding: 40px 30px;
+  margin: 40px auto;
+  border-radius: 16px; 
+  box-shadow: 0 10px 30px rgba(139, 119, 101, 0.15); 
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+h1 {
+  font-size: 2rem;
+  color: #4a3728;
+  margin-top: 0;
+}
+h1::before { content: "🥳 "; }
+h1::after { content: " 🥳"; }
+
+.message {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #665544;
+  margin-bottom: 30px;
+}
+
+.card-links {
+  display: flex;
+  gap: 12px; 
+  justify-content: center;
+}
+
+.card-links a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 12px 20px;
+  border-radius: 30px; 
+  color: #ffffff;
+  background-color: #8c6d53; 
+  transition: all 0.2s ease;
+  flex: 1; 
+}
+
+.card-links a:hover {
+  background-color: #6f543e; 
+  box-shadow: 0 4px 12px rgba(140, 109, 83, 0.3);
+}
+
+.card-links a:active {
+  transform: scale(0.98);
+}
+
+.card-links a:focus {
+  outline: 3px solid rgba(140, 109, 83, 0.4); 
+  outline-offset: 2px;
+}
+
+.card-links a:visited {
+  color: #ffffff; 
+}
+
+section {
+  margin: 20px auto;
+  max-width: 400px; 
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 5px solid #8c6d53; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  display: none;
+  text-align: left; 
+  
+  animation: fadeIn 0.4s ease forwards; 
+}
+
+section h2 {
+  font-size: 1.1rem;
+  margin: 0 0 5px 0;
+  color: #4a3728;
+}
+
+section p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #776655;
+}
+
+section:target {
+  display: block;
+}
+
+
+section:hover {
+  transform: none; 
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

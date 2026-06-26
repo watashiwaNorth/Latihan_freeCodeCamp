@@ -1,0 +1,169 @@
+/* ==========================================
+   1. GLOBAL RESET & LAYOUT
+   ========================================== */
+* {
+  box-sizing: border-box; /* Memastikan padding tidak merusak ukuran lebar elemen */
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #0f172a; /* Warna Midnight Blue yang lebih deep, modern, dan tidak kaku */
+  color: #f8fafc;            /* Warna putih pudar (whitesmoke) yang lebih nyaman di mata */
+  margin: 0;
+  padding: 20px 10px;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.06); /* Efek semi-transparan (glassmorphism) yang lebih halus */
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  margin: 30px auto;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Bayangan disamarkan agar terlihat menyatu */
+  backdrop-filter: blur(4px);                  /* Efek blur tipis di belakang container */
+}
+
+.center {
+  text-align: center;
+}
+
+.title {
+  font-size: 1.8rem;
+  margin-top: 0;
+  color: #ffffff;
+}
+
+.description {
+  font-size: 1rem;
+  color: #cbd5e1;
+  margin-bottom: 30px;
+}
+
+/* ==========================================
+   2. FORM ELEMENTS (FIELDSET & LABELS)
+   ========================================== */
+fieldset {
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Mengganti border abu-abu kaku dengan putih transparan */
+  border-radius: 8px;
+  margin: 20px 0;
+  padding: 20px;
+}
+
+fieldset legend {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #3b82f6; /* Memberikan aksen warna biru cerah pada judul sub-form */
+  padding: 0 10px;
+}
+
+label {
+  font-size: 1rem;
+  color: #e2e8f0;
+}
+
+label:not(.contact-method) {
+  display: block;
+  margin: 15px 0 8px 0;
+}
+
+/* ==========================================
+   3. INPUTS & TEXTAREA
+   ========================================== */
+input:not(.contact-method-radio-btn),
+textarea {
+  background-color: rgba(255, 255, 255, 0.08);
+  width: 100%; /* Menggunakan 100% karena sudah dibantu box-sizing: border-box */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+input,
+input::placeholder,
+textarea {
+  color: #f8fafc;
+}
+
+/* Efek interaktif saat kolom input diklik oleh user */
+input:not(.contact-method-radio-btn):focus,
+textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* ==========================================
+   4. CUSTOM RADIO BUTTONS
+   ========================================== */
+.contact-method {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+  margin-left: 15px;
+}
+
+.contact-method-radio-btn {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #cbd5e1;
+  vertical-align: middle;
+  cursor: pointer;
+  position: relative; /* Menggunakan relative agar titik tengah bisa diposisikan absolut secara presisi */
+  margin-right: 15px;
+  transition: all 0.2s ease;
+}
+
+.contact-method-radio-btn:checked {
+  border-color: #22c55e; /* Mengubah warna border lingkaran menjadi hijau saat aktif */
+}
+
+.contact-method-radio-btn::before {
+  display: block;
+  content: " ";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0); /* Titik tengah dijamin pas di tengah matematis */
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.2);
+}
+
+.contact-method-radio-btn:checked::before {
+  transform: translate(-50%, -50%) scale(1);
+  background-color: #22c55e; /* Menggunakan warna hijau esensial asli kamu (lightgreen modern) */
+}
+
+/* ==========================================
+   5. BUTTON STYLES
+   ========================================== */
+.submit-btn {
+  cursor: pointer;
+  background-color: #2563eb; /* Warna Royal Blue asli pilihanmu yang sedikit dipertajam */
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 14px 30px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  display: block;
+  margin: 30px auto 10px auto;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.submit-btn:hover {
+  background-color: #1d4ed8; /* Warna menggelap saat kursor menyentuh tombol */
+  transform: translateY(-1px);
+}
+
+.submit-btn:active {
+  transform: translateY(1px);
+}
