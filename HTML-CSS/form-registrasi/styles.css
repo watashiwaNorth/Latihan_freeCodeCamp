@@ -1,0 +1,149 @@
+/* ==========================================
+   1. GLOBAL RESET & BASE STYLES
+   ========================================== */
+* {
+  box-sizing: border-box; /* Mencegah elemen meluber keluar saat diberi padding/border */
+}
+
+body {
+  width: 100%;
+  min-height: 100vh; /* Diubah dari height ke min-height agar form panjang tidak terpotong di mobile */
+  margin: 0;
+  background-color: #1b1b32;
+  color: #f5f6f7;
+  font-family: Tahoma, system-ui, sans-serif; /* Ditambahkan fallback font standard */
+  font-size: 16px;
+  padding: 20px;
+}
+
+/* ==========================================
+   2. TYPOGRAPHY & HEADINGS
+   ========================================== */
+h1 {
+  margin: 1.5rem auto 0.5rem auto;
+  text-align: center;
+}
+
+p.sub-title {
+  margin: 0 auto 2rem auto;
+  text-align: center;
+  color: #dfdfe2;
+}
+
+/* ==========================================
+   3. FORM LAYOUT & COMPONENT STYLES
+   ========================================== */
+form {
+  width: 100%;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+
+fieldset {
+  border: none;
+  padding: 1.5rem 0;
+  border-bottom: 3px solid #3b3b4f;
+}
+
+fieldset:last-of-type {
+  border-bottom: none;
+}
+
+legend {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+label {
+  display: block;
+  margin: 1rem 0;
+}
+
+/* ==========================================
+   4. INPUTS, TEXTAREA, & SELECT FIELDS
+   ========================================== */
+input,
+textarea,
+select {
+  margin: 8px 0 0 0;
+  width: 100%;
+  min-height: 2.5em;
+  border-radius: 4px;
+}
+
+/* Penyelarasan warna background untuk semua field agar konsisten */
+input, 
+textarea,
+select {
+  background-color: #0a0a23;
+  border: 1px solid #0a0a23;
+  color: #ffffff;
+  padding: 8px;
+}
+
+/* Fokus efek untuk aksesibilitas user */
+input:focus, 
+textarea:focus,
+select:focus {
+  outline: 2px solid #3b3b4f;
+  border-color: #ffffff;
+}
+
+input::placeholder {
+  color: #858591;
+}
+
+/* Utility Class untuk Radio & Checkbox */
+.inline {
+  width: unset;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+}
+
+input[type="file"] {
+  padding: 4px 0;
+  background: none;
+  border: none;
+}
+
+/* ==========================================
+   5. BUTTON & LINKS STYLES
+   ========================================== */
+.terms-container {
+  margin: 1.5rem 0;
+}
+
+a {
+  color: #dfdfe2;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+input[type="submit"] {
+  display: block;
+  width: 100%; /* Menggunakan 100% dari form induk (max 500px) agar seimbang */
+  margin: 2rem auto 0 auto;
+  height: 2.8em;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: #3b3b4f;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out; /* Animasi transisi halus saat tombol disentuh */
+}
+
+/* Efek interaktif tombol agar terlihat profesional */
+input[type="submit"]:hover {
+  background-color: #ffffff;
+  color: #1b1b32;
+}
+
+input[type="submit"]:active {
+  transform: scale(0.98);
+}
