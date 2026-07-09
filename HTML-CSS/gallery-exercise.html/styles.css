@@ -1,0 +1,72 @@
+/* ==========================================
+   1. GLOBAL RESET & BASE STYLES
+   ========================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #f5f6f7;
+  color: #1b1b32;
+}
+
+/* ==========================================
+   2. HEADER STYLES
+   ========================================== */
+.header {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 32px 16px;
+  background-color: #0a0a23; /* Warna biru gelap khas freeCodeCamp */
+  color: #ffffff;
+  border-bottom: 4px solid #fdb347; /* Garis emas aksen asli */
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+/* ==========================================
+   3. FLEXBOX GALLERY LAYOUT
+   ========================================== */
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px 16px;
+}
+
+/* Pengaturan Dimensi & Bentuk Gambar */
+.gallery img {
+  width: 100%;
+  max-width: 350px;
+  height: 300px;
+  object-fit: cover; /* Memastikan foto tidak gepeng/distorsi */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Bayangan tipis agar gambar terlihat berdimensi */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi animasi yang halus */
+}
+
+/* ==========================================
+   4. INTERACTIVE EFFECTS & UTILITIES
+   ========================================== */
+/* Efek Sentuhan Akhir: Gambar sedikit mengangkat saat didekati kursor */
+.gallery img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Elemen bantu Flexbox asli untuk menyeimbangkan sisa baris terakhir */
+.gallery::after {
+  content: "";
+  width: 350px;
+}
