@@ -1,0 +1,96 @@
+/* =============================================
+   Pengaturan Dasar Halaman
+   ============================================= */
+body {
+    /* Dimensi dan penempatan (sesuai user stories) */
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 80vw;
+    min-height: calc(100vh - 100px);
+
+    /* Estetika */
+    background: linear-gradient(135deg, #f5f0f0 0%, #d4a0a0 100%);
+    font-family: 'Inter', 'Poppins', Arial, sans-serif;
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+/* =============================================
+   Header: Gambar & Judul Acara
+   ============================================= */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+header img:hover {
+    transform: scale(1.02);
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #1e2a38;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+/* =============================================
+   Garis Pemisah (HR)
+   ============================================= */
+hr {
+    width: 80%;               /* nilai persen sesuai syarat */
+    margin: 30px auto;
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #a0525f, transparent);
+    opacity: 0.8;
+}
+
+/* =============================================
+   Bagian Fitur Acara (Section)
+   ============================================= */
+section {
+    width: 80%;               /* nilai persen sesuai syarat */
+    margin: 20px auto;
+    padding: 20px 25px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(5px);
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #8b3a3a;
+    margin-bottom: 10px;
+}
+
+section p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+}
