@@ -1,0 +1,105 @@
+html {
+    font-size: 24px;
+}
+
+body {
+    background-color: #e8e0d5;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Wadah koran */
+.newspaper {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #fdfaf3;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 60px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    color: #2c2416;
+    line-height: 1.6;
+}
+
+/* Nama koran */
+.name {
+    font-size: 2rem;
+    font-family: 'Times New Roman', serif;   
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 4px;
+    color: #1a1a1a;
+    border-bottom: 3px double #2c2416;
+    padding-bottom: 10px;
+    margin: 0 0 5px;
+}
+
+/* Tanggal */
+.date {
+    text-align: center;
+    font-style: italic;
+    color: #5a5246;
+    margin: 10px 0 0;
+    font-size: 0.9em;
+}
+
+/* Garis pemisah */
+hr {
+    border: none;
+    border-top: 1px solid #ccc5b9;
+    margin: 20px 0;
+}
+
+/* Judul utama */
+.headline {
+    font-size: 2em;             /* 32px */
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0 10px;
+    line-height: 1.2;
+    color: #1a1a1a;
+}
+
+/* Sub-judul */
+.sub-headline {
+    font-weight: 100;
+    font-size: 1.5em;           /* 24px */
+    font-style: italic;
+    text-align: center;
+    color: #4a4037;
+    margin: 0 0 25px;
+}
+
+/* Penulis */
+.author {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    color: #5a5246;
+    margin-bottom: 30px;
+}
+
+/* Paragraf isi */
+.text {
+    text-indent: 20px;
+    line-height: 2em;
+    margin-bottom: 20px;
+    text-align: justify;
+    font-size: 1em;
+}
+
+/* Huruf pertama diperbesar */
+.text::first-letter {
+    font-weight: bold;
+    font-size: 2em;             /* 32px */
+    color: #8b5e3c;
+    float: left;
+    margin-right: 6px;
+    line-height: 0.9;
+}
