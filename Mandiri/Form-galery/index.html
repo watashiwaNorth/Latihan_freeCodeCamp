@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Galeri | Lumina Visual</title>
+  <!-- Google Fonts (Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <!-- Font Awesome untuk ikon (opsional) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <div class="header__logo">
+        <img src="https://i.pinimg.com/736x/a2/c0/d2/a2c0d2512e83f247a4c9f339178b7bfd.jpg" alt="logo.png" width="40px">
+      <span>LUMINA</span>
+    </div>
+    <nav class="header__nav">
+      <a href="#">Beranda</a>
+      <a href="#">Galeri</a>
+      <a href="#">Tentang</a>
+      <a href="#">Kontak</a>
+    </nav>
+    <button class="header__upload-btn">+ Upload</button>
+  </header>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="dashboard">
+
+    <!-- Bagian Filter & Pencarian -->
+    <section class="toolbar">
+      <div class="toolbar__categories">
+        <button class="toolbar__category active">Semua</button>
+        <button class="toolbar__category">Fotografi</button>
+        <button class="toolbar__category">Desain Grafis</button>
+        <button class="toolbar__category">Ilustrasi</button>
+      </div>
+      <div class="toolbar__search">
+        <label for="search" class="sr-only">Cari karya</label>
+        <input type="text" id="search" placeholder="Cari judul...">
+      </div>
+    </section>
+
+    <!-- Grid Galeri -->
+    <section class="gallery">
+      <!-- Kartu 1 sampai 12 (placeholder) -->
+      <div class="gallery__card">
+        <div class="gallery__img">
+          <img src="https://i.pinimg.com/736x/cc/ae/30/ccae300a031e450cc83390f39c1c0a95.jpg" alt="Judul karya 1">
+        </div>
+        <div class="gallery__info">
+          <h3>Poster Ikan Mancing</h3>
+          <p>North, 2026</p>
+        </div>
+      </div>
+      <!-- Ulangi untuk 11 kartu lainnya -->
+      <!-- ... -->
+    </section>
+
+    <!-- Pagination -->
+    <nav class="pagination">
+      <a href="#">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <span>...</span>
+      <a href="#">8</a>
+    </nav>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="footer__contact">
+      <p>📍 Jl. Kreatif No. 42, Jakarta</p>
+      <p>📞 +62 812-3456-7890</p>
+      <p>✉️ hello@luminavisual.com</p>
+    </div>
+    <div class="footer__social">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-dribbble"></i></a>
+      <a href="#"><i class="fab fa-behance"></i></a>
+    </div>
+    <p class="footer__copy">© 2026 Lumina Visual. All rights reserved.</p>
+  </footer>
+
+  <!-- ================= LIGHTBOX (modal) ================= -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox__close">&times;</span>
+    <img class="lightbox__image" src="" alt="Preview">
+    <div class="lightbox__caption">
+      <h3></h3>
+      <p></p>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,203 @@
+/* ===========================
+   VARIABEL & RESET
+   =========================== */
+:root {
+  --color-primary: #2c3e50;
+  --color-accent: #3498db;
+  --color-bg: #f8f9fa;
+  --color-white: #ffffff;
+  --shadow: 0 4px 12px rgba(0,0,0,0.1);
+  --radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-bg);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Class untuk screen reader saja */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+/* ===========================
+   HEADER
+   =========================== */
+.header, .header__nav {
+  margin: 2px 2px 3px 3px;
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+}
+
+.header__logo {
+ max-width: 100px;
+ width: 20px;
+ display:flex;
+}
+
+
+.header__nav a {
+  margin: 2px;
+  text-decoration: none;
+  border: 1px solid black;
+  text-align: center;
+  background-color: #2c3e50;
+  size: 40px;
+  color: white;
+  display: flexbox;
+  flex-wrap: wrap;
+}
+
+.header__nav a:hover {
+  size: 50px;
+  color: cyan;
+
+}
+
+.header__upload-btn {
+ flex-wrap: wrap;
+ display: flexbox;
+ border: 1px solid black;
+ background-color: #f8f9fa;
+}
+
+/* ===========================
+   TOOLBAR (FILTER & SEARCH)
+   =========================== */
+.toolbar {
+ margin: 2px;
+  text-align: center;
+  background-color: white;
+   border: 1px solid black;
+  
+}
+
+.toolbar__categories {
+ text-decoration: none; 
+}
+
+.toolbar__category {size: 40px;
+  color: white;
+  display: flexbox;
+  flex-wrap: wrap;
+  padding: 10px;
+  background-color: #2c3e50;
+  transition: transform 0.2s;
+}
+
+.toolbar__search input {
+  border: 1px solid #2c3e50;
+}
+
+/* ===========================
+   GALLERY GRID
+   =========================== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.gallery__card {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.2s;
+  background-color: teal;
+}
+.gallery__card:hover {
+  transform: translateY(-4px);
+}
+
+.gallery__img img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.gallery__info {
+  padding: 15px;
+}
+
+/* ===========================
+   PAGINATION
+   =========================== */
+.pagination {
+  flex-wrap: wrap;
+  display: flex;
+  border: 1px solid white;
+text-align: center;
+}
+.pagination a {
+  text-decoration: none;
+  color: black;
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+.footer {
+  padding: 20px;
+  display:flexbox;
+  background-color: #2c3e50;
+  border: 2px solid black;
+  color: #f8f9fa;
+}
+
+.footer__contact {
+  text-decoration: none;
+  color: white;
+}
+
+.footer__social a {
+  text-decoration: none;
+  color: white;
+}
+
+/* ===========================
+   LIGHTBOX
+   =========================== */
+.lightbox {
+  /* overlay, hidden by default */
+}
+
+.lightbox__close {
+  /* tombol close */
+}
+
+.lightbox__image {
+  /* gambar besar */
+}
+
+.lightbox__caption {
+  /* caption */
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+@media (max-width: 992px) {
+  .gallery { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 576px) {
+  .gallery { grid-template-columns: 1fr; }
+  .header { flex-direction: column; }
+}

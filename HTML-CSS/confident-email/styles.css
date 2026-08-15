@@ -1,0 +1,87 @@
+/* ========================================
+   Latar & Font Global
+   ======================================== */
+body {
+    background-color: #1a1a1a;
+    background-image:
+        radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 30px 30px;
+    font-family: 'Share Tech Mono', 'Courier New', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+/* ========================================
+   Kartu Email Utama
+   ======================================== */
+#email {
+    background-color: #2d2d2d;
+    padding: 50px;
+    margin-top: 50px;
+    width: 500px;
+    box-sizing: border-box;
+    border: 2px solid #c0392b;
+    border-radius: 8px;
+    box-shadow:
+        0 0 20px rgba(192, 57, 43, 0.3),
+        0 8px 32px rgba(0, 0, 0, 0.5);
+    color: #d4d4d4;
+    line-height: 1.8;
+    position: relative;
+}
+
+/* ========================================
+   Stempel Klasifikasi
+   ======================================== */
+#confidential,
+#top-secret {
+    display: inline-block;
+    padding: 6px 14px;
+    margin-left: 8px;
+    border: 2px dashed #c0392b;
+    font-family: 'Special Elite', 'Courier New', monospace;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #c0392b;
+    transform: rotate(-3deg);
+    opacity: 0.85;
+    user-select: none;
+}
+
+#top-secret {
+    transform: rotate(2deg);
+    border-color: #e67e22;
+    color: #e67e22;
+    margin-left: 12px;
+}
+
+/* ========================================
+   Teks Tersensor (Blur)
+   ======================================== */
+.blurred {
+    filter: blur(4px);
+    transition: filter 0.3s ease;
+    cursor: crosshair;
+    user-select: none;
+}
+
+.blurred:hover {
+    filter: blur(0);
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 1px 4px;
+    border-radius: 3px;
+}
+
+/* ========================================
+   Paragraf
+   ======================================== */
+p {
+    margin: 20px 0;
+    font-size: 0.95rem;
+    text-align: justify;
+}
