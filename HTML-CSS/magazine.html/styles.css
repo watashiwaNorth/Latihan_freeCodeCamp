@@ -1,0 +1,268 @@
+/* =========================================
+   CSS VARIABLES (Custom Properties)
+   Digunakan agar warna mudah diubah di satu tempat.
+   ========================================= */
+:root {
+  --color-bg: rgb(20, 30, 40);
+  --color-text: linen;
+  --color-accent: orangered;
+  --color-highlight: #00beef;
+  --color-hover: #306203;
+  --font-serif: 'Baskervville', serif;
+  --font-sans: 'Raleway', sans-serif;
+  --font-display: 'Anton', sans-serif;
+}
+
+/* Reset dasar */
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Pengaturan root font-size: 62.5% = 10px,
+   sehingga 1rem = 10px untuk memudahkan perhitungan */
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-serif);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+}
+
+/* Seleksi teks */
+::selection {
+  background: var(--color-accent);
+  color: white;
+}
+
+/* Tipografi heading */
+h1 {
+  font-family: var(--font-display);
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+}
+
+/* Tautan umum */
+a {
+  text-decoration: none;
+  color: var(--color-text);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-highlight);
+}
+
+/* Grid utama majalah */
+main {
+  display: grid;
+  grid-template-columns: minmax(2rem, 1fr) minmax(min-content, 94rem) minmax(2rem, 1fr);
+  row-gap: 3rem;
+  padding: 3rem 0;
+}
+
+/* Gambar umum */
+img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Garis pemisah */
+hr {
+  margin: 1.5rem 0;
+  border: 1px solid rgba(120, 120, 120, 0.6);
+}
+
+/* Bagian heading (judul, author, sosial media) */
+.heading {
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 1.5rem;
+  align-items: center;
+}
+
+/* Hero */
+.hero {
+  grid-column: 1 / -1;
+  position: relative;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.hero-title {
+  text-align: center;
+  color: var(--color-accent);
+  font-size: 8rem;
+  letter-spacing: 2px;
+}
+
+.hero-subtitle {
+  font-size: 2.4rem;
+  color: var(--color-accent);
+  text-align: center;
+}
+
+/* Author */
+.author {
+  font-size: 2rem;
+  font-family: var(--font-sans);
+}
+
+.author-name a:hover {
+  background-color: var(--color-hover);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+
+.publish-date {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Ikon sosial media */
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  font-size: 2.5rem;
+  align-items: center;
+}
+
+.social-icons a {
+  color: var(--color-text);
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--color-highlight);
+  transform: translateY(-3px);
+}
+
+/* Teks artikel */
+.text {
+  grid-column: 2 / 3;
+  font-size: 1.8rem;
+  letter-spacing: 0.6px;
+  column-width: 25rem;
+  text-align: justify;
+}
+
+/* Drop cap pada paragraf pertama */
+.first-paragraph::first-letter {
+  font-size: 6rem;
+  color: var(--color-accent);
+  float: left;
+  margin-right: 1rem;
+  line-height: 1;
+}
+
+/* Kutipan */
+.quote {
+  color: var(--color-highlight);
+  font-size: 2.4rem;
+  text-align: center;
+  font-family: var(--font-sans);
+}
+
+.quote::before {
+  content: '" ';
+}
+
+.quote::after {
+  content: ' "';
+}
+
+/* Bagian teks dengan gambar */
+.text-with-images {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* Daftar riwayat */
+.lists {
+  list-style-type: none;
+  margin-top: 2rem;
+}
+
+.lists li {
+  margin-bottom: 1.5rem;
+}
+
+.list-title, .list-subtitle {
+  color: var(--color-highlight);
+}
+
+/* Galeri gambar */
+.image-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(3, min-content);
+  gap: 2rem;
+  place-items: center;
+}
+
+.image-1, .image-3 {
+  grid-column: 1 / -1;
+}
+
+/* Responsivitas */
+@media only screen and (max-width: 720px) {
+  .image-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .text-with-images {
+    grid-template-columns: 1fr;
+  }
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .hero-title {
+    font-size: 6rem;
+  }
+  
+  .hero-subtitle,
+  .author,
+  .quote,
+  .list-title {
+    font-size: 1.8rem;
+  }
+  
+  .social-icons {
+    font-size: 2rem;
+    gap: 1rem;
+  }
+
+  .text {
+    font-size: 1.6rem;
+  } 
+}
+
+@media only screen and (max-width: 420px){
+  .hero-title {
+    font-size: 4.5rem;
+  }
+}
