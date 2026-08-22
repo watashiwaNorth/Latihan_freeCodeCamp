@@ -1,0 +1,137 @@
+/* ============================
+   Reset Dasar & Font
+   ============================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f7f9fc;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    color: #1e293b;
+}
+
+/* ============================
+   Judul Halaman
+   ============================ */
+h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+}
+
+/* ============================
+   Kontainer Flex
+   ============================ */
+.pricing-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+/* ============================
+   Kartu Harga Dasar
+   ============================ */
+.pricing-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0 0 200px;
+    border: 2px solid black;
+    border-radius: 16px;
+    background: white;
+    padding: 24px 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.pricing-card h2 {
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.pricing-card p {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2563eb;
+    margin-bottom: 16px;
+}
+
+.pricing-card ul {
+    list-style: none;
+    margin-top: auto;
+}
+
+.pricing-card li {
+    padding: 6px 0;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.pricing-card li:last-child {
+    border-bottom: none;
+}
+
+/* ============================
+   Paket Basic
+   ============================ */
+.basic-plan {
+    order: 0;
+    border-top: 6px solid #3b82f6;
+}
+
+/* ============================
+   Paket Pro
+   ============================ */
+.pro-plan {
+    order: 1;
+    flex-grow: 2;
+    border-top: 6px solid #8b5cf6;
+}
+
+/* ============================
+   Paket Premium
+   ============================ */
+.premium-plan {
+    order: 2;
+    border-top: 6px solid #f59e0b;
+}
+
+/* ============================
+   Responsif
+   ============================ */
+@media (max-width: 700px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .pricing-card {
+        flex: 0 0 100%;
+        max-width: 360px;
+    }
+
+    .pro-plan {
+        flex-grow: 0;
+    }
+}
