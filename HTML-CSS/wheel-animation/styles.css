@@ -1,0 +1,120 @@
+/* ==========================
+   Pengaturan Dasar Halaman
+   ========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #1e3a5f 0%, #4ca1af 100%);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ==========================
+   Roda Ferris
+   ========================== */
+.wheel {
+  border: 3px solid #0a0a0a;
+  border-radius: 50%;
+  margin-left: 50px;
+  position: absolute;
+  height: 55vw;
+  width: 55vw;
+  max-width: 500px;
+  max-height: 500px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  animation: wheel 10s linear infinite;
+}
+
+/* ==========================
+   Jari-jari Roda
+   ========================== */
+.line {
+  background-color: #0a0a0a;
+  width: 50%;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0% 0%;
+  z-index: 1;
+}
+
+/* Posisi jari-jari kedua hingga keenam */
+.line:nth-of-type(2) { transform: rotate(60deg); }
+.line:nth-of-type(3) { transform: rotate(120deg); }
+.line:nth-of-type(4) { transform: rotate(180deg); }
+.line:nth-of-type(5) { transform: rotate(240deg); }
+.line:nth-of-type(6) { transform: rotate(300deg); }
+
+/* ==========================
+   Kabin Penumpang
+   ========================== */
+.cabin {
+  background-color: #e63946;
+  width: 20%;
+  height: 20%;
+  position: absolute;
+  border: 2px solid #111;
+  transform-origin: 50% 0%;
+  z-index: 2;
+  animation: cabins 10s ease-in-out infinite;
+}
+
+/* Penempatan kabin di sekeliling roda */
+.cabin:nth-of-type(1) { right: -8.5%; top: 50%; }
+.cabin:nth-of-type(2) { right: 17%;   top: 93.5%; }
+.cabin:nth-of-type(3) { right: 67%;   top: 93.5%; }
+.cabin:nth-of-type(4) { left: -8.5%;  top: 50%; }
+.cabin:nth-of-type(5) { left: 17%;    top: 7%; }
+.cabin:nth-of-type(6) { right: 17%;   top: 7%; }
+
+/* ==========================
+   Animasi Roda
+   ========================== */
+@keyframes wheel {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ==========================
+   Animasi Kabin (agar tetap tegak)
+   ========================== */
+@keyframes cabins {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    background-color: #f9c74f;
+  }
+  50% {
+    background-color: #9b5de5;
+  }
+  75% {
+    background-color: #f9c74f;
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+/* ==========================
+   Responsif untuk Layar Kecil
+   ========================== */
+@media (max-width: 600px) {
+  .wheel {
+    height: 70vw;
+    width: 70vw;
+    margin-left: 30px;
+  }
+}
