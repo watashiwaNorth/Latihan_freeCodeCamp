@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Belanja</title>
+</head>
+<body>
+    <h1>Soal 3</h1>
+    <p>
+    <b>Cerita:</b><br>
+    Kamu memiliki daftar belanja berupa array: ["susu", "roti", "telur", "keju"]. Tampilkan setiap item dengan nomor urut.
+
+    <b></b>Instruksi:</b><br>
+    <ul>
+        <li>Gunakan perulangan for...of untuk mengambil setiap item.</li>
+        <li>Gunakan variabel bantu untuk nomor urut (mulai dari 1) dan tambahkan setiap iterasi.</li>
+        <li>Cetak dengan format "1. susu", "2. roti", dst.</li>
+    </p>
+    <script>
+        const daftarBelanja = ["susu", "roti", "telur", "keju"];
+        let nomorUrut = 1;
+        for (const item of daftarBelanja) {
+            console.log(`${nomorUrut}. ${item}`);
+            nomorUrut++;
+        }
+    </script>
+</body>
+</html>

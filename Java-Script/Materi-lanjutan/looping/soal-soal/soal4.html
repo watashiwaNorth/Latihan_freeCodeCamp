@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penyaring Nilai Lulus</title>
+</head>
+<body>
+    <h1>Soal 5</h1>
+    <p><b>Cerita:</b><br>
+    Daftar nilai ujian siswa: [55, 70, 85, 90, 45, 78]. Hanya nilai ≥ 75 yang dianggap lulus. Saring nilai-nilai yang lulus.<br>
+    <b>Instruksi:</b><br>
+    <ul>
+        <ol>Gunakan metode filter() pada array nilai.</ol>
+        <ol>Kondisi: nilai >= 75.</ol>
+        <ol>Cetak array hasil saringan.</ol>
+    </ul>
+    </p>
+    <script>
+        const nilaiUjian = [55,70,85,90,45,78];
+        const nilaiLulus = nilaiUjian.filter(nilai => nilai >= 75);
+        console.log(nilaiLulus);
+    </script>
+</body>
+</html>
