@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal3</title>
+</head>
+<body>
+    <h1> Soal 3 </h1>
+    <p><b>Cerita :</b><br>
+    Aplikasi cuaca ingin memberikan rekomendasi pakaian berdasarkan suhu udara (dalam derajat Celsius).<br>
+    Aturannya:<br>
+    - Suhu < 10: "Jaket tebal dan syal"<br>
+    - 10 ≤ suhu < 20: "Jaket ringan"<br>
+    - 20 ≤ suhu < 30: "Kemeja atau kaos"<br>
+    - Suhu ≥ 30: "Pakaian berbahan adem dan minum banyak air"<br>
+    Buat function rekomendasiPakaian(suhu) yang mengembalikan rekomendasi tersebut.<br> <br>
+    <b>Intruksi</b></p>
+    <ul>
+        <li>Buat function rekomendasiPakaian(suhu).</li>
+        <li>Gunakan if-else if untuk menentukan rekomendasi berdasarkan suhu.</li>
+        <li>Kembalikan string rekomendasi.</li>
+    </ul>
+    <script>
+        let nama = "North";
+        let suhu = 25;
+        let rekomendasi;
+        function rekomendasiPakaian(suhu) {
+            if (suhu < 10) {
+                return rekomendasi = "Jaket tebal dan syal";
+            } else if (suhu >= 10 && suhu < 20) {
+                return rekomendasi = "Jaket ringan";
+            } else {
+                return rekomendasi = "kemeja atau kaos";
+            }
+        }
+        console.log(`Nama: ${nama}, Suhu: ${suhu}°C, Rekomendasi Pakaian: ${rekomendasiPakaian(suhu)}`);
+    </script>
+
+</body>
+</html>

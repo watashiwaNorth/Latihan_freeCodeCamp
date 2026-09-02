@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal1</title>
+</head>
+<body>
+    <h1>Soal 1</h1>
+    <p><b>Cerita:</b> <br>
+        Sebuah aplikasi ramalan ingin menampilkan zodiak berdasarkan tanggal lahir pengguna.<br>
+         Zodiak ditentukan dari bulan dan tanggal. <br>
+         Buatlah function tentukanZodiak(tanggal, bulan) yang menerima dua parameter: tanggal (1–31) dan bulan (1–12).
+          Aturannya sebagai berikut:
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>Zodiak</th>
+                <th>Rentang Tanggal</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Aries</td>
+                <td>21 Maret - 19 April</td>
+            </tr>
+            <tr>
+                <td>Taurus</td>
+                <td>20 April - 20 Mei</td>
+            </tr>
+            <tr>
+                <td>Gemini</td>
+                <td>21 Mei - 20 Juni</td>
+            </tr>
+            <tr>
+                <td>Cancer</td>
+                <td>21 Juni - 22 Juli</td>
+            </tr>
+            <tr>
+                <td>Leo</td>
+                <td>23 Juli - 22 Agustus</td>
+            </tr>
+            <tr>
+                <td>Virgo</td>
+                <td>23 Agustus - 22 September</td>
+            </tr>
+            <tr>
+                <td>Libra</td>
+                <td>23 September - 22 Oktober</td>
+            </tr>
+            <tr>
+                <td>Scorpio</td>
+                <td>23 Oktober - 21 November</td>
+            </tr>
+            <tr>
+                <td>Sagittarius</td>
+                <td>22 November - 21 Desember</td>
+            </tr>
+            <tr>
+                <td>Capricorn</td>
+                <td>22 Desember - 19 Januari</td>
+            </tr>
+            <tr>
+                <td>Aquarius</td>
+                <td>20 Januari - 18 Februari</td>
+            </tr>
+            <tr>
+                <td>Pisces</td>
+                <td>19 Februari - 20 Maret</td>
+            </tr>
+        </tbody>
+    </table>
+    <ul>
+        <li>Buat function tentukanZodiak(tanggal, bulan).</li>
+        <li>Gunakan if-else untuk membandingkan bulan dan tanggal, lalu kembalikan nama zodiak.</li>
+        <li>Uji function dengan beberapa tanggal lahir dan cetak hasilnya.</li>
+    </ul>
+    <script>
+        function tentukanZodiak(tanggal, bulan) {
+            if (bulan === 3 && tanggal >= 21 || bulan === 4 && tanggal <= 19) {
+                return "Aries";
+            } else if (bulan === 4 && tanggal >= 20 || bulan === 5 && tanggal <= 20) {
+                return "Taurus";
+            } else if (bulan === 5 && tanggal >= 21 || bulan === 6 && tanggal <= 20) {
+                return "Gemini";
+            } else if (bulan === 6 && tanggal >= 21 || bulan === 7 && tanggal <= 22) {
+                return "Cancer";
+            } else if (bulan === 7 && tanggal >= 23 || bulan === 8 && tanggal <= 22) {
+                return "Leo";
+            } else if (bulan === 8 && tanggal >= 23 || bulan === 9 && tanggal <= 22) {
+                return "Virgo";
+            } else if (bulan === 9 && tanggal >= 23 || bulan === 10 && tanggal <= 22) {
+                return "Libra";
+            } else if (bulan === 10 && tanggal >= 23 || bulan === 11 && tanggal <= 21) {
+                return "Scorpio";
+            } else if (bulan === 11 && tanggal >= 22 || bulan === 12 && tanggal <= 21) {
+                return "Sagittarius";
+            } else if (bulan === 12 && tanggal >= 22 || bulan === 1 && tanggal <= 19) {
+                return "Capricorn";
+            } else if (bulan === 1 && tanggal >= 20 || bulan === 2 && tanggal <= 18) {
+                return "Aquarius";
+            } else if (bulan === 2 && tanggal >= 19 || bulan === 3 && tanggal <= 20) {
+                return "Pisces";
+            } else {
+                return "Tanggal atau bulan tidak valid.";
+            }
+        }
+        console.log(tentukanZodiak(25, 3));
+        console.log(tentukanZodiak(5, 5));
+        console.log(tentukanZodiak(15, 8));
+        console.log(tentukanZodiak(30, 12));
+        console.log(tentukanZodiak(10, 1));
+    </script>
+</body>
+</html>

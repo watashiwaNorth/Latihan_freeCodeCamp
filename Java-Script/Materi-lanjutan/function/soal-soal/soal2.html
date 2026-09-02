@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 2</title>
+</head>
+<body>
+    <h1>Soal 2</h1>
+    <p><b>Cerita:</b> <br>
+        Sebuah bioskop memberlakukan harga tiket berdasarkan kategori umur penonton. <br>
+        Kategorinya adalah:<br>
+        - Anak-anak (umur < 12): Rp 25.000<br>
+        - Remaja (12 ≤ umur < 18): Rp 35.000<br>
+        - Dewasa (18 ≤ umur < 60): Rp 50.000<br>
+        - Lansia (umur ≥ 60): Rp 30.000<br>
+        Buat function hargaTiket(umur) yang menerima umur penonton dan mengembalikan harga tiket sesuai kategori.<br>
+    </p>
+    <ul>
+        <li> Definisikan function hargaTiket(umur).</li>
+        <li>Gunakan if-else if untuk mengecek umur dan mengembalikan harga yang sesuai (dalam number).</li>
+        <li>Uji dengan beberapa umur dan cetak hasilnya.</li>
+    </ul>
+    <script>
+        let nama = "North"
+        let umur = 10;
+        let harga;
+        function hargaTiket(umur) {
+            if (umur < 12){
+                return harga = 25000;
+            } else if (umur >= 12 && umur < 18) {
+                return harga = 35.000;
+            } else if (umur >= 18 && umur < 60) {
+                return harga = 50.000;
+            } else if (umur >= 60) {
+                return harga = 30.000;
+            }
+        }
+
+        console.log(`Nama: ${nama}, Umur: ${umur}, Harga Tiket: Rp ${hargaTiket(umur)}`);
+    </script>
+</body>
+</html>
