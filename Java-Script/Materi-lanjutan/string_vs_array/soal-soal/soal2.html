@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 2</title>
+</head>
+<body>
+    <h1>Soal 2</h1>
+    <p><b>Cerita:</b><br>
+        Sebuah aplikasi sensor ingin memeriksa apakah kata "merah" muncul dalam kalimat "Bendera kita berwarna merah putih". <br>
+        Aplikasi juga ingin mengubah kalimat menjadi array kata untuk analisis lebih lanjut. <br>
+        <b>Instruksi:</b><br>
+        <ul>
+            <li>Buat variabel kalimat berisi "Bendera kita berwarna merah putih".</li>
+            <li>Ubah kalimat menjadi array kata dengan split(" ") dan simpan dalam kataArray.</li>
+            <li>Periksa apakah array kataArray mengandung kata "merah" menggunakan metode includes().</li>
+            <li>Tampilkan array kata, lalu hasil pemeriksaan (boolean) dengan format "Apakah ada kata 'merah'? true/false".</li>
+        </ul>
+    </p>
+
+   <script>
+        let kalimat = "Bendera kita berwarna merah putih";
+        const kataArray = kalimat.split(" ");
+        const adaKataMerah = kataArray.includes("merah");
+        console.log(kataArray);
+        console.log(`Apakah ada kata 'merah'? ${adaKataMerah}`);
+   </script>
+</body>
+</html>

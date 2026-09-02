@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 1</title>
+</head>
+<body>
+    <h1>Soal 1</h1>
+    <p><b>Cerita:</b><br>
+    Seorang ibu rumah tangga menulis daftar belanja dalam satu baris: "susu,roti,telur,keju". <br>
+    Namun, dia ingin mengubahnya menjadi array agar bisa menambah atau menghapus item dengan mudah. <br>
+    Setelah itu, dia ingin menggabungkannya kembali menjadi string dengan pemisah " - ". <br>
+    <b>Instruksi:</b></p>
+    <ul>
+        <li>Buat variabel daftarString berisi string "susu,roti,telur,keju".</li>
+        <li>Ubah string tersebut menjadi array menggunakan split(",") dan simpan dalam daftarArray.</li>
+        <li>Tambahkan item "mentega" ke akhir array dengan metode push().</li>
+        <li>Gabungkan kembali array menjadi string dengan pemisah " - " menggunakan join(" - ").</li>
+        <li>Tampilkan array setelah penambahan, lalu string hasil penggabungan.</li>
+    </ul>
+    <script>
+        let daftarString = "susu,roti,telur,keju";
+        const kataArray = daftarString.split(",");
+        kataArray.push("mentega");
+        const gabungArray = kataArray.join(" - ");
+        console.log(daftarString);
+        console.log(kataArray);
+        console.log(gabungArray);
+    </script>
+</body>
+</html>

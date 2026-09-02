@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 3</title>
+</head>
+<body>
+    <h1>Soal 3</h1>
+    <p><b>Cerita:</b><br>
+        Seorang desainer grafis ingin membuat efek teks terbalik untuk judul. Diberikan string "Januari,Februari,Maret", ia ingin mengubahnya menjadi array, membalik urutan elemen, lalu menggabungkannya kembali dengan spasi.
+    </p>
+    <p><b>Instruksi:</b></p>
+    <ol>
+        <li>Buat variabel bulanString berisi "Januari,Februari,Maret".</li>
+        <li>Ubah menjadi array dengan split(",").</li>
+        <li>Balik urutan array menggunakan reverse().</li>  
+        <li>Gabungkan array menjadi string dengan pemisah spasi " ".</li>
+        <li>Tampilkan array setelah dibalik, lalu string hasil penggabungan.</li>
+    </ol>
+    <script>
+        let bulanString = "Januari,Februari,Maret";
+        const bulanArray = bulanString.split(",");
+        bulanArray.reverse();
+        const gabungBulan = bulanArray.join(" ");
+        console.log(bulanArray);
+        console.log(gabungBulan);
+    </script>
+</body>
+</html>
