@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1> Mau Belajar Apa Hari Ini? </h1>
+        <p> Bagaimana moodmu? </p>
+
+        <div class="mood-bottons">
+            <button class="mood-btn" data-mood="marah"> 😠 Marah </button>
+            <button class="mood-btn" data-mood="sedih"> 😢 Sedih </button>
+            <button class="mood-btn" data-mood="bahagia"> 😄 Bahagia </button>
+            <button class="mood-btn" data-mood="capek"> 😩 Capek </button>
+            <button class="mood-btn" data-mood="pusing"> 🤯 Pusing </button>
+            <button class="mood-btn" data-mood="semangat"> 😎 Semangat </button>
+        </div>
+
+        <div class="input-group">
+            <label for="moodInput">Atau tulis moodmu sendiri </label>
+            <input type="text" id="moodInput" placeholder="contoh: bingung? malas? atau semangat?...">
+        </div>
+        <button id="btnPeriksa">🔍 Mari kita periksa!</button>
+
+        <div id="hasil" class="hasil"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
